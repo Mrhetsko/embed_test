@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Chat Embed Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        #chatbox {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 300px;
+            height: 200px;
+            position: relative;
+        }
+        #closeBtn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        #openBtn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h3>AI Chat Embed Test</h3>
+    <div id="chatbox">
+        <button id="closeBtn" onclick="closeChat()">Закрити</button>
+        <p>Привіт! Я твій AI-бот.</p>
+    </div>
+    <button id="openBtn" onclick="openChat()" style="display:none;">Відкрити чат</button>
+
+    <script>
+        function closeChat() {
+            document.getElementById('chatbox').style.display = 'none';
+            document.getElementById('openBtn').style.display = 'inline-block';
+        }
+        function openChat() {
+            document.getElementById('chatbox').style.display = 'block';
+            document.getElementById('openBtn').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
